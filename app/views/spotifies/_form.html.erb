@@ -1,0 +1,27 @@
+<%= form_for(spotify) do |f| %>
+  <% if spotify.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(spotify.errors.count, "error") %> prohibited this spotify from being saved:</h2>
+
+      <ul>
+      <% spotify.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :status %>
+    <%= f.check_box :status %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

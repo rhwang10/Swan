@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @spotify.title %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @spotify.status %>
+</p>
+
+<%= link_to 'Edit', edit_spotify_path(@spotify) %> |
+<%= link_to 'Back', spotifies_path %>
