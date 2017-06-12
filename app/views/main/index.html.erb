@@ -1,0 +1,16 @@
+<div class="main">
+  <h1>Hello!</h1>
+  <p>Welcome to Swan</p>
+  <!-- <%= link_to 'Click here to get started', artists_path %> -->
+
+  <p>Search by Artist</p>
+
+  <%= form_tag artists_path, method: "get", html: { class: "form" } do %>
+    <div class="form-group col-xs-6">
+      <%= text_field_tag(:artist_name, "", placeholder: "Enter artist name", class: "form-control") %>
+    </div>
+      <br/>
+      <small class="form-text" "text-muted">Make sure there aren't any typos</small>
+    <%= submit_tag "Search", class: "btn btn-block" %>
+    <% end %>
+</div>
