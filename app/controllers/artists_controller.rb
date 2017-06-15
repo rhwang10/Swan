@@ -1,7 +1,8 @@
 class ArtistsController < ApplicationController
   def index
     if !params[:artist_name].empty?
-      # @artistnum = RSpotify::Artist.search(params[:artist_name]).total
+      artist_results = RSpotify::Artist.search(params[:artist_name]).total
+      # puts artist_results
       @artists = RSpotify::Artist.search(params[:artist_name])
 
     else
